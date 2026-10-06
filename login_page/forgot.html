@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Forgot Password</h2>
+        <form id="forgotForm">
+            <p style="text-align:center; color:#555; margin-bottom: 20px; font-size: 14px;">Enter your registered email address to receive a secure 6-digit OTP.</p>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <button type="submit" id="sendOtpBtn">Send OTP</button>
+            <p class="auth-link"><a href="index.html">Back to Login</a></p>
+        </form>
+    </div>
+    <script src="forgot.js"></script>
+</body>
+</html>

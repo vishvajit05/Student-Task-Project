@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Verify OTP</h2>
+        <form id="verifyForm">
+            <p style="text-align:center; color:#555; margin-bottom: 20px; font-size: 14px;">We have sent a 6-digit OTP configuration to your inbox.</p>
+            <div class="input-group">
+                <label for="otp">Enter OTP</label>
+                <input type="text" id="otp" name="otp" placeholder="Enter 6-digit OTP" required maxlength="6">
+            </div>
+            <button type="submit" id="verifyOtpBtn">Verify OTP</button>
+            <p class="auth-link"><a href="forgot.html">Use a different Email</a></p>
+        </form>
+    </div>
+    <script src="verify.js"></script>
+</body>
+</html>

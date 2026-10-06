@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="tasks.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">Student Portal</div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tasks.html" class="active">Tasks</a></li>
+            <li><a href="index.html" class="logout-btn">Logout</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="tasks-container">
+        <!-- Header -->
+        <header class="tasks-header">
+            <h1>Task Management</h1>
+            <p>Add, view, complete, and delete your tasks seamlessly.</p>
+        </header>
+
+        <!-- Add Task Form Section -->
+        <section class="add-task-section">
+            <div class="card">
+                <h2>Add New Task</h2>
+                <form id="taskForm">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title" required placeholder="E.g., Complete Mathematics Assignment">
+                        </div>
+                        <div class="input-group">
+                            <label for="priority">Priority</label>
+                            <select id="priority" name="priority">
+                                <option value="Low">Low</option>
+                                <option value="Medium" selected>Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="deadline">Deadline</label>
+                            <input type="date" id="deadline" name="deadline" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="3" required placeholder="Describe the task details..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submitTaskBtn" class="primary-btn">Add Task</button>
+                    <!-- Loading indicator for adding a task -->
+                    <span id="formLoading" class="loading-text" style="display:none; margin-left:15px; color:#555;">Adding task...</span>
+                </form>
+            </div>
+        </section>
+
+        <!-- Tasks Display Section -->
+        <section class="task-list-section">
+            <div class="card">
+                <h2>Your Tasks</h2>
+                <div class="table-responsive">
+                    <table id="tasksTable">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Priority</th>
+                                <th>Deadline</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tasksBody">
+                            <tr>
+                                <td colspan="6" style="text-align:center;">Loading tasks...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="tasks.js"></script>
+</body>
+</html>
